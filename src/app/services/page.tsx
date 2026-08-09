@@ -19,7 +19,7 @@ export default function ServicesPage() {
         subtitle="De la conception à la visibilité, nous accompagnons votre projet à chaque étape."
       />
 
-      <section className="bg-paper py-24">
+      <section className="bg-paper py-14 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="space-y-6">
             {services.map((service, i) => (
@@ -43,7 +43,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-navy-950 py-24 text-white">
+      <section className="bg-navy-950 py-14 lg:py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
           <Reveal>
             <h2 className="text-4xl font-black tracking-tight sm:text-5xl">

@@ -23,7 +23,7 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-navy-950 pt-28 pb-20">
+    <section className="relative flex items-center overflow-hidden bg-navy-950 pt-24 pb-14 lg:min-h-screen lg:pt-28 lg:pb-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"

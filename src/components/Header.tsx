@@ -69,12 +69,12 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between py-3.5">
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
-            src="/logo-mark.png"
+            src={scrolled || open ? "/logo-mark.png" : "/logo-mark-light.png"}
             alt="Dream&Launch"
             width={36}
             height={34}
             priority
-            className="h-9 w-auto"
+            className={`w-auto ${scrolled || open ? "h-7" : "h-9"}`}
           />
           <span
             className={`text-[1.05rem] font-bold tracking-tight transition-colors duration-300 ${
@@ -146,23 +146,23 @@ export default function Header() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+          className="md:hidden relative w-10 h-10"
         >
           <motion.span
-            animate={open ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className={`block w-6 h-[2px] origin-center transition-colors duration-300 ${
+            animate={open ? { rotate: 45, y: 0 } : { rotate: 0, y: -7 }}
+            className={`absolute inset-0 m-auto h-[2px] w-6 rounded-full transition-colors duration-300 ${
               scrolled || open ? "bg-navy-900" : "bg-white"
             }`}
           />
           <motion.span
             animate={open ? { opacity: 0 } : { opacity: 1 }}
-            className={`block w-6 h-[2px] transition-colors duration-300 ${
+            className={`absolute inset-0 m-auto h-[2px] w-6 rounded-full transition-colors duration-300 ${
               scrolled || open ? "bg-navy-900" : "bg-white"
             }`}
           />
           <motion.span
-            animate={open ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className={`block w-6 h-[2px] origin-center transition-colors duration-300 ${
+            animate={open ? { rotate: -45, y: 0 } : { rotate: 0, y: 7 }}
+            className={`absolute inset-0 m-auto h-[2px] w-6 rounded-full transition-colors duration-300 ${
               scrolled || open ? "bg-navy-900" : "bg-white"
             }`}
           />
@@ -179,18 +179,25 @@ export default function Header() {
             className="md:hidden overflow-hidden border-t border-black/5 bg-paper/95 backdrop-blur-xl"
           >
             <nav className="flex flex-col px-6 py-4 gap-1">
-              {nav.map((item) => (
-                <Link
+              {nav.map((item, i) => (
+                <div
                   key={item.href}
-                  href={item.href}
-                  className={`px-2 py-3 text-base font-medium ${
-                    pathname === item.href
-                      ? "text-navy-900"
-                      : "text-navy-900/60"
-                  }`}
+                  className="flex items-center justify-between"
                 >
-                  {item.label}
-                </Link>
+                  <Link
+                    href={item.href}
+                    className={`px-2 py-3 text-base font-medium ${
+                      pathname === item.href
+                        ? "text-navy-900"
+                        : "text-navy-900/60"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                  {i === 0 && (
+                    <InstagramIcon className="text-navy-900/60" />
+                  )}
+                </div>
               ))}
               <Link
                 href="/contact"
@@ -198,7 +205,6 @@ export default function Header() {
               >
                 Contactez-nous
               </Link>
-              <InstagramIcon className="mt-4 text-navy-900/60" />
             </nav>
           </motion.div>
         )}

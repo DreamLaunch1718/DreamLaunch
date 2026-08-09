@@ -10,7 +10,7 @@ export default function PageHeader({
   subtitle?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-navy-950 pt-36 pb-20 text-white">
+    <section className="relative overflow-hidden bg-navy-950 pt-28 pb-14 text-white lg:pt-36 lg:pb-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"

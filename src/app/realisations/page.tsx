@@ -18,7 +18,7 @@ export default function RealisationsPage() {
         subtitle="Quelques projets sur lesquels nous avons eu le plaisir de travailler."
       />
 
-      <section className="bg-paper py-24">
+      <section className="bg-paper py-14 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {realisations.map((project, i) => (

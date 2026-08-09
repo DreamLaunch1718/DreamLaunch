@@ -14,10 +14,10 @@ export default function AboutPage() {
     <>
       <PageHeader kicker="À propos de nous" title={about.title} />
 
-      <section className="bg-paper py-16">
+      <section className="bg-paper py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-6 lg:px-10">
           <Reveal>
-            <p className="text-xl font-medium leading-relaxed text-navy-900">
+            <p className="text-lg font-medium leading-relaxed text-navy-900 sm:text-xl">
               {about.intro}
             </p>
           </Reveal>
@@ -34,7 +34,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-navy-900/10 bg-navy-950 py-16 text-white">
+      <section className="border-t border-navy-900/10 bg-navy-950 py-12 lg:py-16 text-white">
         <div className="mx-auto max-w-4xl px-6 lg:px-10">
           <Reveal>
             <h2 className="text-4xl font-black tracking-tight sm:text-5xl">
@@ -53,7 +53,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-paper py-16">
+      <section className="bg-paper py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
             <p className="text-sm font-semibold uppercase tracking-wider text-orange-500">

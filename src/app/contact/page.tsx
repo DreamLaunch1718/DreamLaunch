@@ -18,7 +18,7 @@ export default function ContactPage() {
         subtitle={contact.subtitle}
       />
 
-      <section className="bg-paper py-24">
+      <section className="bg-paper py-14 lg:py-24">
         <div className="mx-auto max-w-2xl px-6 lg:px-10">
           <Reveal>
             <ContactForm />

@@ -51,7 +51,7 @@ export default function ContactForm() {
           Message envoyé
         </h3>
         <p className="mt-2 text-sm text-navy-900/60">
-          Merci ! Nous répondons dans un maximum de 2 jours.
+          Nous vous répondrons dans les plus brefs délais.
         </p>
       </motion.div>
     );

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/c/Louka/Sites webs/\" 2>/dev/null)",
+      "Read(//c/Louka/Sites webs//**)",
+      "Read(//c/Users/Louka/AppData/Local/Temp/claude/c--Louka-Sites-webs-Dream-Launch/7324502e-ea35-4996-9f37-b91ad83acbed/scratchpad/**)",
+      "Bash(python3 -)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

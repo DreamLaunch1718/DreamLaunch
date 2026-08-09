@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --color-navy-950: #071a2e;
+  --color-navy-900: #0b2a4a;
+  --color-navy-800: #123a63;
+  --color-navy-700: #1a4a7a;
+  --color-navy-600: #245c94;
+
+  --color-orange-500: #f5871f;
+  --color-orange-400: #ff9d2e;
+  --color-orange-300: #ffb85c;
+
+  --color-ink: #0a0a0a;
+  --color-paper: #fafaf9;
+
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-orange-500);
+  color: var(--color-navy-950);
+}

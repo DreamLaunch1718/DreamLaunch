@@ -103,7 +103,7 @@ export const realisations = [
     slug: "atelier-bomboi",
     title: "L'atelier Bomboi",
     description: "Site web réalisé sur mesure.",
-    href: "https://bomboi.vercel.app/",
+    href: "https://atelier-bomboi.vercel.app/",
     image: "/bomboi.webp",
   },
 ];
